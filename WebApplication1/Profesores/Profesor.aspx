@@ -7,7 +7,6 @@
 
 
 
-
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -82,6 +81,9 @@
            
 
             <uc1:Notificador runat="server" ID="Notificador" />
+
+            <br />
+         
         </div>
     </div>
     </form>

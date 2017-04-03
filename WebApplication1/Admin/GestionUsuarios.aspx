@@ -48,7 +48,7 @@
          
                 <li><a href="GestionUsuarios.aspx"><i class="fa fa-file-o fa-fw"></i>Gestionar Users</a></li>
 
-                <li><a href="#">OpcionFuture</a></li>
+                <li><a href="AutoGraficas.aspx">Gráficas Automáticas</a></li>
             </ul>
         </div>
         <div id="contenido" class="col-md-9 well">

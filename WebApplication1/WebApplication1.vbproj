@@ -92,6 +92,7 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\AutoGraficas.aspx" />
     <Content Include="Admin\GestionUsuarios.aspx" />
     <Content Include="Alumnos\Alumno.aspx" />
     <Content Include="Global.asax" />
@@ -117,6 +118,7 @@
     <Content Include="Profesores\Profesor.aspx" />
     <Content Include="Alumnos\TareasAlumno.aspx" />
     <Content Include="Profesores\TareasProfesor.aspx" />
+    <Content Include="User Controls\AutoFillableChart.ascx" />
     <Content Include="User Controls\LBAlumnosConectados.ascx" />
     <Content Include="User Controls\LBProfesoresConectados.ascx" />
     <Content Include="User Controls\Notificador.ascx" />
@@ -128,6 +130,13 @@
     <Content Include="Inicio.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\AutoGraficas.aspx.designer.vb">
+      <DependentUpon>AutoGraficas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AutoGraficas.aspx.vb">
+      <DependentUpon>AutoGraficas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Admin\GestionUsuarios.aspx.designer.vb">
       <DependentUpon>GestionUsuarios.aspx</DependentUpon>
     </Compile>
@@ -275,6 +284,13 @@
     <Compile Include="Profesores\TareasProfesor.aspx.vb">
       <DependentUpon>TareasProfesor.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\AutoFillableChart.ascx.designer.vb">
+      <DependentUpon>AutoFillableChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\AutoFillableChart.ascx.vb">
+      <DependentUpon>AutoFillableChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="User Controls\LBAlumnosConectados.ascx.designer.vb">
       <DependentUpon>LBAlumnosConectados.ascx</DependentUpon>

@@ -47,12 +47,12 @@
             }
         </style>
 <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
-    
-
     <ContentTemplate>
         <asp:LinkButton ID="lnkDummy" runat="server"></asp:LinkButton>
 <ajaxToolkit:ModalPopupExtender ID="ModalPopupExtender1" BehaviorID="mpe" runat="server"
-    PopupControlID="pnlPopup" TargetControlID="lnkDummy" BackgroundCssClass="body" CancelControlID = "btnHide" Drag ="true" PopupDragHandleControlID="accordionHeader" X="820" Y="350" DropShadow="true">
+    PopupControlID="pnlPopup" TargetControlID="lnkDummy" BackgroundCssClass="body" 
+    CancelControlID = "btnHide" Drag ="true" PopupDragHandleControlID="accordionHeader" 
+    X="820" Y="350" DropShadow="true">
 </ajaxToolkit:ModalPopupExtender>
 <asp:Panel ID="pnlPopup" runat="server" CssClass="modalPopup" Style="display: none">
     <div class="accordionHeaderSelected">

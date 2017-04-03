@@ -6,6 +6,9 @@ Public Class Global_asax
     Sub Application_Start(ByVal sender As Object, ByVal e As EventArgs)
         ' Se desencadena al iniciar la aplicación
         Application("numusers") = 0
+        Application("numA") = 0
+        Application("numP") = 0
+        Application("numADM") = 0
         Dim listap As New ListBox()
         Dim listaal As New ListBox()
 

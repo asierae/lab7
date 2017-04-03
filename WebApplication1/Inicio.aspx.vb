@@ -43,15 +43,17 @@ Public Class WebForm1
                 temp = Application("listaprof")
                 temp.Items.Add(TextBox1.Text)
                 Application("listaprof") = temp
-
+                Application("numP") = Application("numP") + 1
                 Response.Redirect("/Profesores/Profesor.aspx")
             ElseIf Session("role") = "A" Then
                 Dim temp As New ListBox
                 temp = Application("listaalum")
                 temp.Items.Add(TextBox1.Text)
                 Application("listaalum") = temp
+                Application("numA") = Application("numA") + 1
                 Response.Redirect("/Alumnos/Alumno.aspx")
             ElseIf Session("role") = "ADMIN" Then
+                Application("numADM") = Application("numADM") + 1
                 Response.Redirect("/Admin/GestionUsuarios.aspx")
             Else
                 Response.Redirect("Inicio.aspx?msj= que role eres?")
