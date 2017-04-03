@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class AlumnosConectadosLB
+Partial Public Class LBAlumnosConectados
 
     '''<summary>
     '''Control UpdatePanel1.

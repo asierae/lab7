@@ -11,6 +11,35 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		<script src="js/jquery-3.1.1.min.js"></script>
+    <style type="text/css">
+      .a
+       {
+         background-color:red;
+         }
+
+          .b
+        {
+         background-color:orange;
+         }
+
+          .c
+         {
+          background-color:lightgray;
+         }
+          .d
+         {
+         background-color:greenyellow;
+         }
+          .e
+         {
+         background-color:lightgreen;
+         }
+          .border
+         {
+          border: medium solid #800000;
+          width:500px;                
+         }
+      </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -46,6 +75,20 @@
         </h5>
         <h5><strong>Password:(*)</strong><asp:TextBox ID="TextBox4" runat="server" CssClass="form-control" Width="200px" ForeColor="Black" TextMode="Password"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="TextBox4" ErrorMessage="Introduce un password" ForeColor="Red"></asp:RequiredFieldValidator>
+            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+            <ajaxToolkit:PasswordStrength ID="PS" runat="server"
+    TargetControlID="TextBox4"
+    DisplayPosition="RightSide"
+    StrengthIndicatorType="Text"
+    PreferredPasswordLength="10"
+    PrefixText="Fortaleza:"
+    TextCssClass="TextIndicator_TextBox1"
+    MinimumNumericCharacters="0"
+    MinimumSymbolCharacters="0"
+    RequiresUpperAndLowerCaseCharacters="false"
+    TextStrengthDescriptions="Muy débil;Débil;Normal;Fuerte;Excelente"
+    TextStrengthDescriptionStyles="a;b;c;d;e"
+    CalculationWeightings="35;15;25;25" /><!--longitud,numeros,mayusculas,simbolos-->
         </h5>
         <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="TextBox4" ErrorMessage="El Password debe tener 1 Mayúscula,1 dígito, 1 caracter epecial y entre 6 y 12 de longitud" ForeColor="Red" ValidationExpression="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$@$!%*#?&amp;]).{6,12}"></asp:RegularExpressionValidator>
         <br />

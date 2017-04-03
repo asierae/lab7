@@ -11,16 +11,10 @@
 
         'End If
         Label1.Text = Session("username")
-        Label2.Text = Application.Contents("numusers")
     End Sub
 
-    Protected Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        'Label2.Text = Application.Contents("numusers")
-        'For Each elem In Application.Contents("listaprof")
-        '    ListBox1.Items.Add(elem)
-        'Next
-        'For Each elem In Application.Contents("listaalum")
-        '    ListBox1.Items.Add(elem)
-        'Next
-    End Sub
+
+
+
+
 End Class

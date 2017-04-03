@@ -27,6 +27,7 @@ Public Class WebForm1
         If resp = "1" Then
             Application.Lock()
             Application("numusers") = Application("numusers") + 1
+            Application("last") = TextBox1.Text
             Application.UnLock()
 
             If TextBox1.Text = "vadillo@ehu.es" Then
@@ -37,17 +38,18 @@ Public Class WebForm1
             End If
 
             If Session("role") = "P" Then
-  
+
                 Dim temp As New ListBox()
                 temp = Application("listaprof")
                 temp.Items.Add(TextBox1.Text)
                 Application("listaprof") = temp
+
                 Response.Redirect("/Profesores/Profesor.aspx")
             ElseIf Session("role") = "A" Then
-                'Dim temp As New ListBox
-                'temp = Application("listaalum")
-                'temp.Items.Add(TextBox1.Text)
-                'Application("listaalum") = temp
+                Dim temp As New ListBox
+                temp = Application("listaalum")
+                temp.Items.Add(TextBox1.Text)
+                Application("listaalum") = temp
                 Response.Redirect("/Alumnos/Alumno.aspx")
             ElseIf Session("role") = "ADMIN" Then
                 Response.Redirect("/Admin/GestionUsuarios.aspx")

@@ -1,6 +1,11 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Profesor.aspx.vb" Inherits="WebApplication1.TareasProfesor" %>
 
 <%@ Register Src="~/User Controls/OnlineUsersCounter.ascx" TagPrefix="uc1" TagName="OnlineUsersCounter" %>
+<%@ Register Src="~/User Controls/LBProfesoresConectados.ascx" TagPrefix="uc1" TagName="LBProfesoresConectados" %>
+<%@ Register Src="~/User Controls/LBAlumnosConectados.ascx" TagPrefix="uc1" TagName="LBAlumnosConectados" %>
+<%@ Register Src="~/User Controls/Notificador.ascx" TagPrefix="uc1" TagName="Notificador" %>
+
+
 
 
 <!DOCTYPE html>
@@ -29,7 +34,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/Profesor.aspx">Menu Profesor</a>
+          <a class="navbar-brand" href="Profesor.aspx">Menu Profesor</a>
         </div>
     
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -47,7 +52,7 @@
         <div class="row">
         <div class="col-md-3">
             <ul class="nav nav-pills nav-stacked">
-                <li class="active"><a href="/Profesor.aspx"><i class="fa fa-home fa-fw"></i>Home</a></li>
+                <li class="active"><a href="Profesor.aspx"><i class="fa fa-home fa-fw"></i>Home</a></li>
          
                 <li><a href="TareasProfesor.aspx"><i class="fa fa-file-o fa-fw"></i>VerTareas</a></li>
                 <li><a href="Estadisticas.aspx"><i class="fa fa-table fa-fw"></i>Estadisticas</a></li>
@@ -61,24 +66,22 @@
         <div id="contenido" class="col-md-9 well">
           
             Bienvenido <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+            <br />
+            <br />
             <asp:ScriptManager ID="ScriptManager1" runat="server">
+
             </asp:ScriptManager>
+            
+           
+
+            <uc1:OnlineUsersCounter runat="server" ID="OnlineUsersCounter" />
+            <uc1:LBProfesoresConectados runat="server" ID="LBProfesoresConectados" />
+            <uc1:LBAlumnosConectados runat="server" ID="LBAlumnosConectados" />
             <br />
-            <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
-            <ajaxToolkit:AlwaysVisibleControlExtender ID="Label3_AlwaysVisibleControlExtender" runat="server" BehaviorID="Label3_AlwaysVisibleControlExtender" TargetControlID="Label3" />
-            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                <ContentTemplate>
-                    <asp:ListBox ID="ListBox1" runat="server"></asp:ListBox>
-                    <asp:ListBox ID="ListBox2" runat="server"></asp:ListBox>
-                    <br />
-                    <asp:Timer ID="Timer1" runat="server" Interval="3000">
-                    </asp:Timer>
-                    <br />
-                    <asp:Label ID="Label2" runat="server" Text="Refreshing"></asp:Label>
-                </ContentTemplate>
-            </asp:UpdatePanel>
-            <uc1:OnlineUsersCounter runat="server" id="OnlineUsersCounter" />
-            <br />
+            
+           
+
+            <uc1:Notificador runat="server" ID="Notificador" />
         </div>
     </div>
     </form>

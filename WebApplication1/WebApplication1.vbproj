@@ -94,7 +94,7 @@
   <ItemGroup>
     <Content Include="Admin\GestionUsuarios.aspx" />
     <Content Include="Alumnos\Alumno.aspx" />
-    <Content Include="HtmlPage1.html" />
+    <Content Include="Global.asax" />
     <Content Include="Profesores\App_Data\HAS.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -117,7 +117,11 @@
     <Content Include="Profesores\Profesor.aspx" />
     <Content Include="Alumnos\TareasAlumno.aspx" />
     <Content Include="Profesores\TareasProfesor.aspx" />
+    <Content Include="User Controls\LBAlumnosConectados.ascx" />
+    <Content Include="User Controls\LBProfesoresConectados.ascx" />
+    <Content Include="User Controls\Notificador.ascx" />
     <Content Include="User Controls\OnlineUsersCounter.ascx" />
+    <Content Include="User Controls\Slider.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -152,7 +156,9 @@
       <DependentUpon>Confirmar.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="HtmlPage1.html.vb" />
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Profesores\Estadisticas.aspx.designer.vb">
       <DependentUpon>Estadisticas.aspx</DependentUpon>
     </Compile>
@@ -270,11 +276,39 @@
       <DependentUpon>TareasProfesor.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="User Controls\LBAlumnosConectados.ascx.designer.vb">
+      <DependentUpon>LBAlumnosConectados.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\LBAlumnosConectados.ascx.vb">
+      <DependentUpon>LBAlumnosConectados.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\LBProfesoresConectados.ascx.designer.vb">
+      <DependentUpon>LBProfesoresConectados.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\LBProfesoresConectados.ascx.vb">
+      <DependentUpon>LBProfesoresConectados.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\Notificador.ascx.designer.vb">
+      <DependentUpon>Notificador.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\Notificador.ascx.vb">
+      <DependentUpon>Notificador.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="User Controls\OnlineUsersCounter.ascx.designer.vb">
       <DependentUpon>OnlineUsersCounter.ascx</DependentUpon>
     </Compile>
     <Compile Include="User Controls\OnlineUsersCounter.ascx.vb">
       <DependentUpon>OnlineUsersCounter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\Slider.ascx.designer.vb">
+      <DependentUpon>Slider.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\Slider.ascx.vb">
+      <DependentUpon>Slider.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
   </ItemGroup>

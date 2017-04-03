@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class OnlineUsersCounter
+Partial Public Class LBProfesoresConectados
 
     '''<summary>
     '''Control UpdatePanel1.
@@ -23,13 +23,13 @@ Partial Public Class OnlineUsersCounter
     Protected WithEvents UpdatePanel1 As Global.System.Web.UI.UpdatePanel
 
     '''<summary>
-    '''Control Label1.
+    '''Control ListBox1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents ListBox1 As Global.System.Web.UI.WebControls.ListBox
 
     '''<summary>
     '''Control Timer1.
